@@ -84,4 +84,4 @@ clear and has sufficient instructions to be able to reproduce the issue.
 Please follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 # License
-By contributing your code, you agree to license your contribution under the terms of our project [LICENSE](LICENSE.txt) and to sign the [Salesforce CLA](https://cla.salesforce.com/sign-cla)
+By contributing your code, you agree to license your contribution under the terms specified in [TERMS_OF_USE.txt](TERMS_OF_USE.txt) and to sign the [Salesforce CLA](https://cla.salesforce.com/sign-cla)
