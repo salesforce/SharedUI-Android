@@ -2,7 +2,7 @@
 
 ## 📝 Overview
 
-AndroidSharedUI is a comprehensive Jetpack Compose UI library providing reusable components that follow Salesforce Lightning Design System guidelines. The library includes a complete theming framework with support for multiple design systems, comprehensive accessibility features, and production-ready components for Android applications.
+SharedUI is a comprehensive Jetpack Compose UI library providing reusable components that follow Salesforce Lightning Design System (SLDS) guidelines. The library includes a complete theming framework with support for multiple design systems, comprehensive accessibility features, and production-ready components for Android applications.
 
 ### Key Features
 
@@ -25,23 +25,64 @@ The library is organized into six main component categories:
 - **Selection Components** (2): SingleSelectionList, SelectionListItem
 - **Icon Components** (1): BaseIcon with full SLDS icon support
 
-## 🚀 Installation
+## 🚀 Prerequisites
 
-### Gradle
+- Android Studio Meerkat 2024.3.1 or newer
+- Kotlin 2.1.0+
+- Minimum SDK: API level 28 (Android 9)
+- Jetpack Compose BOM configured in your project
 
-Add SharedUI to your project's `build.gradle`:
+## 📦 Installation
 
-```groovy
-dependencies {
-    implementation 'com.salesforce.android:sharedui:1.0.0'
+### Step 1: Add the Maven Repository
+
+Add the SharedUI Maven repository to your project's `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://opensource.salesforce.com/SharedUI-Android/shared-ui-repository")
+        }
+    }
 }
 ```
 
-### Requirements
+Or if using `settings.gradle` (Groovy):
 
-- Android SDK 24 (Android 7.0) or higher
-- Kotlin 1.9+
-- Jetpack Compose 1.5+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://opensource.salesforce.com/SharedUI-Android/shared-ui-repository' }
+    }
+}
+```
+
+### Step 2: Add the Dependency
+
+Add SharedUI to your module's `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("com.salesforce.android.sharedui:shared-ui:<version>")
+}
+```
+
+Or in `build.gradle` (Groovy):
+
+```groovy
+dependencies {
+    implementation 'com.salesforce.android.sharedui:shared-ui:<version>'
+}
+```
+
+> Check the [releases](https://github.com/salesforce/SharedUI-Android/releases) for the latest available version.
 
 ## 📋 Component Summary
 
